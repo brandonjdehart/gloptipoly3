@@ -34,7 +34,7 @@ $(BUILD_PREFIX)/matlab/addpath_gloptipoly3.m :
 	@mkdir -p $(BUILD_PREFIX)/matlab
 	echo "Writing $(BUILD_PREFIX)/matlab/addpath_gloptipoly3.m"
 	echo "function addpath_gloptipoly3()\n\n \
-	  root = fullfile('$(shell pwd)','gloptipoly3');\n \
+	  root = fullfile('$(shell pwd)','$(UNZIP_DIR)');\n \
 		addpath(fullfile(root));\n \
 		end\n \
 		\n" \
@@ -44,7 +44,7 @@ $(BUILD_PREFIX)/matlab/rmpath_gloptipoly3.m :
 	@mkdir -p $(BUILD_PREFIX)/matlab
 	echo "Writing $(BUILD_PREFIX)/matlab/rmpath_gloptipoly3.m"
 	echo "function rmpath_gloptipoly3()\n\n \
-		root = fullfile('$(shell pwd)','gloptipoly3');\n \
+		root = fullfile('$(shell pwd)','$(UNZIP_DIR)');\n \
 		addpath(fullfile(root));\n \
 		end\n \
 		\n" \
